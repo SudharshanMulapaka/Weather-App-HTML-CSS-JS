@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Live Weather App</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="container">
+    <h1>⛅ Live Weather App</h1>
+    <p class="subtitle">Real-time weather data with comprehensive details</p>
+
+    <div class="search-box">
+      <input type="text" id="cityInput" placeholder="Enter city name (e.g., Mumbai, Tokyo, Paris)" onkeypress="handleKeyPress(event)" />
+      <button onclick="searchWeather()">🔍 <span>Search</span></button>
+    </div>
+
+    <div id="apiStatus"></div>
+
+    <div id="errorBox" class="error-box hidden">
+  <div class="icon">❌</div>
+  <h2>City Not Found</h2>
+  <p>Please check the spelling and try again. Make sure to enter a valid city name.</p>
+</div>
+
+
+    <div id="weatherCard" class="weather-card hidden">
+      <h2 id="cityName"></h2>
+      <p id="currentDate"></p>
+      <p id="coordinates"></p>
+
+      <div class="main-weather">
+        <div>
+          <div id="weatherIcon" class="icon">⛅</div>
+          <h1 id="temperature">--°C</h1>
+          <p id="description"></p>
+          <p id="feelsLike"></p>
+        </div>
+
+        <div class="weather-details">
+          <div><p>🌬️ Wind Speed</p><h3 id="windSpeed">--</h3></div>
+          <div><p>💧 Humidity</p><h3 id="humidity">--</h3></div>
+          <div><p>👁️ Visibility</p><h3 id="visibility">--</h3></div>
+          <div><p>🌡️ Pressure</p><h3 id="pressure">--</h3></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 🌅 Sun and Temperature Block -->
+    <div id="sunTempSection" class="sun-temp-section hidden">
+      <div class="info-block"><p>🌅 Sunrise</p><h3 id="sunrise">--</h3></div>
+      <div class="info-block"><p>🌇 Sunset</p><h3 id="sunset">--</h3></div>
+      <div class="info-block"><p>🌡️ Min Temp</p><h3 id="minTemp">--</h3></div>
+      <div class="info-block"><p>🌡️ Max Temp</p><h3 id="maxTemp">--</h3></div>
+    </div>
+
+    <!-- 📊 Additional Weather Data -->
+    <div id="additionalData" class="additional-section hidden">
+      <h2>📊 Additional Weather Data</h2>
+      <div class="weather-details">
+        <div><p>🧭 Wind Direction</p><h3 id="windDirection">--</h3></div>
+        <div><p>☁️ Cloudiness</p><h3 id="cloudiness">--</h3></div>
+        <div><p>🌊 Sea Level</p><h3 id="seaLevel">--</h3></div>
+        <div><p>🏔️ Ground Level</p><h3 id="groundLevel">--</h3></div>
+        <div><p>🌡️ Temp Range</p><h3 id="tempRange">--</h3></div>
+        <div><p>⏰ Data Time</p><h3 id="dataTime">--</h3></div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      Powered by OpenWeatherMap API • Real-time weather data with JSON processing
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,186 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right top, #6aafff, #bc6ff1);
+  color: white;
+  text-align: center;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+h1, h2 {
+  margin: 10px 0;
+}
+
+.subtitle {
+  margin-bottom: 30px;
+}
+
+.search-box {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.search-box input {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px 0 0 10px;
+  width: 60%;
+  font-size: 1rem;
+}
+
+.search-box button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 0 10px 10px 0;
+  background-color: white;
+  color: purple;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#apiStatus {
+  margin: 10px auto;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: bold;
+  width: fit-content;
+}
+
+.weather-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 20px;
+  margin-top: 30px;
+}
+
+.main-weather {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.weather-details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.weather-details div {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.sun-temp-section,
+.additional-section {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 20px;
+  margin-top: 25px;
+}
+
+.sun-temp-section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.additional-section .weather-details {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.info-block {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.hidden {
+  display: none;
+}
+
+.icon {
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
+.footer {
+  margin-top: 40px;
+  font-size: 0.9rem;
+  color: #ddd;
+}
+.error-box {
+  background: linear-gradient(to right, #d946ef, #9333ea);
+  color: white;
+  padding: 25px;
+  margin-top: 20px;
+  border-radius: 20px;
+  border: 1px solid #fbbf24;
+  font-size: 1.1rem;
+}
+
+.error-box .icon {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right top, #6aafff, #bc6ff1);
+  color: white;
+  text-align: center;
+  transition: background 0.6s ease;
+}
+
+body.scrolled {
+  background: linear-gradient(to right bottom, #4b0082, #000000);
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  transition: background 0.6s ease;
+}
+
+/* Initial background (light violet) */
+body {
+  background: linear-gradient(to right top, #5e05edf1, #bc6ff1);
+  color: white;
+  min-height: 100vh;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+/* Animated Gradient Background */
+body {
+  background: linear-gradient(-45deg, green, #c06c6c, #e89cf8, #450cc1);
+  background-size: 400% 400%;
+  animation: gradientMove 15s ease infinite;
+  color: white;
+  min-height: 100vh;
+  transition: background 0.6s ease;
+}
+
+/* Keyframes for gradient animation */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
