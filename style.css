@@ -1,9 +1,18 @@
 body {
   margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(to right top, #6aafff, #bc6ff1);
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(-45deg, green, #c06c6c, #e89cf8, #450cc1);
+  background-size: 400% 400%;
+  animation: gradientMove 15s ease infinite;
   color: white;
   text-align: center;
+  min-height: 100vh;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 .container {
@@ -23,21 +32,28 @@ h1, h2 {
 .search-box {
   display: flex;
   justify-content: center;
+  gap: 10px;
   margin: 20px 0;
+  flex-wrap: wrap;
 }
 
-.search-box input {
-  padding: 12px 20px;
-  border: none;
-  border-radius: 10px 0 0 10px;
-  width: 60%;
+.search-box input, .search-box button {
+  padding: 12px 15px;
   font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+}
+
+.search-box input[type="text"] {
+  width: 50%;
+  min-width: 200px;
+}
+
+.search-box input[type="date"] {
+  border-radius: 10px;
 }
 
 .search-box button {
-  padding: 12px 20px;
-  border: none;
-  border-radius: 0 10px 10px 0;
   background-color: white;
   color: purple;
   font-weight: bold;
@@ -50,6 +66,10 @@ h1, h2 {
   border-radius: 10px;
   font-weight: bold;
   width: fit-content;
+}
+
+.hidden {
+  display: none;
 }
 
 .weather-card {
@@ -73,38 +93,20 @@ h1, h2 {
   width: 100%;
 }
 
-.weather-details div {
+.weather-details div, .info-block {
   background-color: rgba(255, 255, 255, 0.2);
   padding: 10px;
   border-radius: 15px;
-}
-
-.sun-temp-section,
-.additional-section {
-  background: rgba(255, 255, 255, 0.1);
-  padding: 20px;
-  border-radius: 20px;
-  margin-top: 25px;
 }
 
 .sun-temp-section {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 15px;
-}
-
-.additional-section .weather-details {
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.info-block {
-  background-color: rgba(255, 255, 255, 0.2);
-  padding: 10px;
-  border-radius: 15px;
-}
-
-.hidden {
-  display: none;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 20px;
+  margin-top: 25px;
 }
 
 .icon {
@@ -112,11 +114,6 @@ h1, h2 {
   margin-bottom: 10px;
 }
 
-.footer {
-  margin-top: 40px;
-  font-size: 0.9rem;
-  color: #ddd;
-}
 .error-box {
   background: linear-gradient(to right, #d946ef, #9333ea);
   color: white;
@@ -127,60 +124,8 @@ h1, h2 {
   font-size: 1.1rem;
 }
 
-.error-box .icon {
-  font-size: 3rem;
-  margin-bottom: 10px;
-}
-body {
-  margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(to right top, #6aafff, #bc6ff1);
-  color: white;
-  text-align: center;
-  transition: background 0.6s ease;
-}
-
-body.scrolled {
-  background: linear-gradient(to right bottom, #4b0082, #000000);
-}
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  text-align: center;
-  transition: background 0.6s ease;
-}
-
-/* Initial background (light violet) */
-body {
-  background: linear-gradient(to right top, #5e05edf1, #bc6ff1);
-  color: white;
-  min-height: 100vh;
-}
-
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  text-align: center;
-  overflow-x: hidden;
-}
-
-/* Animated Gradient Background */
-body {
-  background: linear-gradient(-45deg, green, #c06c6c, #e89cf8, #450cc1);
-  background-size: 400% 400%;
-  animation: gradientMove 15s ease infinite;
-  color: white;
-  min-height: 100vh;
-  transition: background 0.6s ease;
-}
-
-/* Keyframes for gradient animation */
-@keyframes gradientMove {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+.footer {
+  margin-top: 40px;
+  font-size: 0.9rem;
+  color: #ddd;
 }
